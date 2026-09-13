@@ -1,6 +1,7 @@
 @echo off
+cd /d "%~dp0"
 echo 正在拉取远程最新代码，防止冲突...
-git.exe pull --rebase
+git.exe pull --rebase --autostash
 
 echo.
 set /p msg=请输入提交信息:
